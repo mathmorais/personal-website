@@ -1,0 +1,22 @@
+{
+  "name": "personal-website",
+  "repository": "git@github.com:mathmorais/personal-website.git",
+  "author": "mathmorais <gm80648@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+		"dev": "yarn workspace @personal-website/frontend dev",
+    "build": "yarn workspace @personal-website/frontendnext build",
+    "start": "yarn workspace @personal-website/frontend next start",
+		"cms:dev": "yarn workspace @personal-website/cms dev",
+    "cms:build": "yarn workspace @personal-website/cms keystone build",
+		"cms:start": "yarn workspace @personal-website/cmskeystone start"
+	},
+  "devDependencies": {
+    "@types/node": "17.0.20",
+    "@types/react": "17.0.39",
+    "typescript": "4.5.5"
+  }
+}
