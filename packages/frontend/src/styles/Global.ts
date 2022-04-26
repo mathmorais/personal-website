@@ -7,16 +7,13 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-  }
+	&:root {
+		font-size: 62.5%;
+	}
 
   body {
-    font: 400 1rem 'Raleway', sans-serif;
-  } 
-
-  button {
-    cursor: pointer;
-  }
+		font: ${({ theme }) => theme.font.shortHand};
+		text-rendering: optimizeLegibility;
+    font-smooth: antialiased;
+	}
 `;
