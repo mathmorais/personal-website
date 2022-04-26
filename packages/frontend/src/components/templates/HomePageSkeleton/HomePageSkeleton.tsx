@@ -1,10 +1,23 @@
-import { Header } from "../../organisms/Header/Header";
-import { HomePageSkeletonWrapper } from "./HomePageSkeleton.styles";
+import {
+	HomePageSkeletonContent,
+	HomePageSkeletonMain,
+	HomePageSkeletonMainContent,
+	HomePageSkeletonWrapper,
+} from "./HomePageSkeleton.styles";
 
-export const HomePageSkeleton = () => {
+export const HomePageSkeleton: React.FC<{
+	header: React.ReactNode;
+}> = ({ header, children }) => {
+	const Header = header ?? <></>;
+
 	return (
 		<HomePageSkeletonWrapper>
-			<Header logo="mathmorais.dev" navigations={[]} />
+			<HomePageSkeletonContent>
+				<HomePageSkeletonMain>
+					{Header}
+					<HomePageSkeletonMainContent>{children}</HomePageSkeletonMainContent>
+				</HomePageSkeletonMain>
+			</HomePageSkeletonContent>
 		</HomePageSkeletonWrapper>
 	);
 };

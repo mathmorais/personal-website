@@ -12,6 +12,8 @@ export const Global = createGlobalStyle`
 	}
 
   body {
+		background: ${({ theme }) => theme.colors.neutrals.black};
+
 		font: ${({ theme }) => theme.font.shortHand};
 		text-rendering: optimizeLegibility;
     font-smooth: antialiased;
