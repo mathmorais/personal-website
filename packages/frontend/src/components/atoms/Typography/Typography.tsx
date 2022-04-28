@@ -1,15 +1,24 @@
-import { textSizes, TextSizesKey } from "./Typography.styles";
+import { forwardRef, HTMLAttributes, ForwardRefRenderFunction } from "react";
+import { textSizes, TextSizesKey, TextStyleProps } from "./Typography.styles";
+
+type ParagraphyAttributes = HTMLAttributes<HTMLParagraphElement>;
 
 type TypographyProps = {
 	size?: TextSizesKey;
-} & React.HTMLAttributes<HTMLParagraphElement>;
+} & ParagraphyAttributes &
+	TextStyleProps;
 
-export const Typography: React.FC<TypographyProps> = ({
-	size,
-	children,
-	...props
-}) => {
+const TypographyRenderFn: ForwardRefRenderFunction<
+	HTMLParagraphElement,
+	TypographyProps
+> = ({ size, children, ...props }, ref) => {
 	const Text = textSizes[size ?? "Medium"];
 
-	return <Text {...props}>{children}</Text>;
+	return (
+		<Text ref={ref} {...props}>
+			{children}
+		</Text>
+	);
 };
+
+export const Typography = forwardRef(TypographyRenderFn);

@@ -1,15 +1,23 @@
-import { Typography } from "components/atoms/Typography/Typography";
 import { VerticalLine } from "components/atoms/VerticalLine/VerticalLine";
-import { PresentationContainer } from "./Presentation.styles";
+import { Typing } from "~/components/atoms/Typing/Typing";
+import { PresentationContainer, PresentationText } from "./Presentation.styles";
 
-export const Presentation = () => {
+export const Presentation: React.FC<{ presentationText: string }> = ({
+	presentationText,
+}) => {
 	return (
 		<PresentationContainer>
 			<VerticalLine />
-			<Typography size="Large">
-				Hi I'm Matheus Morais,
-				<br /> A Frontend Web Developer
-			</Typography>
+			<PresentationText>
+				<Typing
+					staticText={presentationText}
+					options={{
+						startDelay: 250,
+						strings: [presentationText],
+						typeSpeed: 30,
+					}}
+				/>
+			</PresentationText>
 		</PresentationContainer>
 	);
 };

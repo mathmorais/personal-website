@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithoutRef } from "react";
+import { Typography } from "~/components/atoms/Typography/Typography";
+import { Navigator } from "~/components/molecules/Navigator/Navigator";
 
-import { Navigator } from "components/molecules/Navigator/Navigator";
-import { Typography } from "../../atoms/Typography/Typography";
 import { HeaderContainer, HeaderContent } from "./Header.styles";
 
 type HeaderProps = {

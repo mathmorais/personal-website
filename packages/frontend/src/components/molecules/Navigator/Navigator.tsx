@@ -1,5 +1,5 @@
-import { NavigatorItem } from "components/atoms/NavigatorItem/NavigatorItem";
 import { ComponentPropsWithoutRef, useCallback } from "react";
+import { NavigatorItem } from "~/components/atoms/NavigatorItem/NavigatorItem";
 import { NavigatorContainer } from "./Navigator.styles";
 
 type NavigatorProps = {

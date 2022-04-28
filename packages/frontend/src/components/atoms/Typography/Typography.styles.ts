@@ -1,33 +1,32 @@
 import styled from "styled-components";
 
-const Text = styled.p<{ weight?: number }>`
+export type TextStyleProps = {
+	weight?: number;
+};
+
+const Text = styled.p<TextStyleProps>`
 	font-family: ${({ theme }) => theme.font.families.primary};
-	font-weight: ${({ weight, theme }) => weight ?? 500};
+	font-weight: ${({ weight }) => weight ?? 500};
 `;
 
 export const ExtraLarge = styled(Text).attrs({ as: "h1" })`
-	font-size: ${({ theme }) => theme.font.sizes.extraLarge};
-	font-weight: 700;
+	font-size: ${({ theme }) => theme.font.sizes.ExtraLarge};
 `;
 
 export const Large = styled(Text).attrs({ as: "p" })`
-	font-size: ${({ theme }) => theme.font.sizes.large};
-	font-weight: 600;
+	font-size: ${({ theme }) => theme.font.sizes.Large};
 `;
 
 export const Medium = styled(Text).attrs({ as: "p" })`
-	font-size: ${({ theme }) => theme.font.sizes.medium};
-	font-weight: 600;
+	font-size: ${({ theme }) => theme.font.sizes.Medium};
 `;
 
 export const Small = styled(Text).attrs({ as: "p" })`
-	font-size: ${({ theme }) => theme.font.sizes.small};
-	font-weight: 500;
+	font-size: ${({ theme }) => theme.font.sizes.Small};
 `;
 
 export const ExtraSmall = styled(Text).attrs({ as: "p" })`
-	font-size: ${({ theme }) => theme.font.sizes.extraSmall};
-	font-weight: 400;
+	font-size: ${({ theme }) => theme.font.sizes.ExtraSmall};
 `;
 
 export const textSizes = {

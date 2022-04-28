@@ -2,10 +2,10 @@ type FontSize = string | number;
 
 export interface IFont {
 	sizes: {
-		extraSmall: FontSize;
-		small: FontSize;
-		medium: FontSize;
-		large: FontSize;
+		ExtraSmall: FontSize;
+		Small: FontSize;
+		Medium: FontSize;
+		Large: FontSize;
 	};
 
 	families: {
