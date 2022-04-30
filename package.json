@@ -8,7 +8,7 @@
 	],
 	"scripts": {
 		"dev": "yarn workspace @personal-website/frontend dev",
-		"build": "yarn workspace @personal-website/frontendnext build",
+		"build": "yarn workspace @personal-website/frontend next build",
 		"start": "yarn workspace @personal-website/frontend next start",
 		"storybook": "yarn workspace @personal-website/frontend storybook",
 		"cms:dev": "yarn workspace @personal-website/cms dev",

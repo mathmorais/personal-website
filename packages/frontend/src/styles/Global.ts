@@ -7,9 +7,19 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
   }
 
+	html {
+		scroll-snap-type: y mandatory;
+	}
+
 	&:root {
 		font-size: 62.5%;
 	}
+
+
+  &::-webkit-scrollbar {
+		display: none;
+	}
+
 
   body {
 		background: ${({ theme }) => theme.colors.neutrals.black};

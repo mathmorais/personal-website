@@ -1,34 +1,84 @@
 import type { NextPage } from "next";
-import { useState } from "react";
 import { Header } from "../components/organisms/Header/Header";
 import { HomePageSkeleton } from "../components/templates/HomePageSkeleton/HomePageSkeleton";
-import { EffectCallback, useScrollPosition } from "../hooks/useScrollPosition";
 
 import GithubIcon from "../assets/Github.svg";
 import LinkedinSvg from "../assets/Linkedin.svg";
 import { Presentation } from "components/molecules/Presentation/Presentation";
+import { Section } from "~/components/organisms/Section/Section";
+import { ProjectsGrid } from "~/components/organisms/ProjectsGrid/ProjectsGrid";
+import { ProjectCard } from "~/components/molecules/ProjectCard/ProjectCard";
+import { SectionWrapper } from "~/components/organisms/SectionWrapper/SectionWrapper";
+import { SectionSelector } from "~/components/molecules/SectionSelector/SectionSelector";
+
+import { TabSelector } from "~/components/organisms/TabSelector/TabSelector";
+import { ITab } from "~/interfaces/components/ITab";
+import { Typography } from "~/components/atoms/Typography/Typography";
 
 const Home: NextPage = () => {
-	const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-	const { scrollPositionHandler } = useScrollPosition();
-
 	const presentationText =
-		"👋 Hi! I'm Matheus Morais, <br> <strong>Frontend Web Developer</strong> at <a href='https://cidadealta.gg'>Cidade Alta</a>";
+		"👋 Hi! I'm Matheus Morais, <br> <strong>Frontend Developer</strong> at <a href='https://cidadealta.gg'>Cidade Alta</a>";
 
-	const onScroll: EffectCallback = ({ currPos }) =>
-		setHasScrolled(currPos.y > 0);
+	const tabs: ITab[] = [
+		{
+			title: "About me",
+			content: (
+				<Typography size="Small">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
+					eligendi provident nesciunt labore nam totam fugiat rerum atque
+					aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor
+					fuga consequatur voluptas!
+				</Typography>
+			),
+		},
+		{
+			title: "Experiences",
+			content: (
+				<Typography size="Small">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
+				</Typography>
+			),
+		},
+		{
+			title: "Skills",
+			content: (
+				<Typography size="Small">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
+					eligendi provident nesciunt labore nam totam fugiat rerum atque
+					aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor
+					fuga consequatur voluptas! Lorem, ipsum dolor sit amet consectetur
+					adipisicing elit. Non qui eligendi provident nesciunt labore nam totam
+					fugiat rerum atque aspernatur recusandae dolore veniam, perspiciatis
+					animi quos. Dolor fuga consequatur voluptas! Lorem, ipsum dolor sit
+					amet consectetur adipisicing elit. Non qui eligendi provident nesciunt
+					labore nam totam fugiat rerum atque aspernatur recusandae dolore
+					veniam, perspiciatis animi quos. Dolor fuga consequatur voluptas!
+				</Typography>
+			),
+		},
+	];
 
-	scrollPositionHandler({
-		effect: onScroll,
-		useWindow: true,
-		deps: [],
-	});
+	const sections = [
+		<Section fillScreen>
+			<Presentation presentationText={presentationText} />
+		</Section>,
+		<Section fillScreen title="About me" withBackground>
+			<TabSelector tabs={tabs} />
+		</Section>,
+		<Section spacing={8} title="Projects" withBackground>
+			<ProjectsGrid>
+				<ProjectCard />
+				<ProjectCard />
+				<ProjectCard />
+				<ProjectCard />
+			</ProjectsGrid>
+		</Section>,
+	];
 
 	return (
 		<HomePageSkeleton
 			header={
 				<Header
-					scrolled={hasScrolled}
 					logo="mathmorais.dev"
 					navigations={[
 						{
@@ -43,7 +93,10 @@ const Home: NextPage = () => {
 				/>
 			}
 		>
-			<Presentation presentationText={presentationText} />
+			<SectionWrapper>
+				<SectionSelector sectionCount={sections.length} />
+				{sections}
+			</SectionWrapper>
 		</HomePageSkeleton>
 	);
 };

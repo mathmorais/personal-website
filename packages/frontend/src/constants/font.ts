@@ -2,8 +2,8 @@ import { IFont } from "../interfaces/constants/IFont";
 
 export class Font implements IFont {
 	readonly sizes = {
-		ExtraSmall: "1.0rem",
-		Small: "1.2rem",
+		ExtraSmall: "1.2rem",
+		Small: "1.4rem",
 		Medium: "1.8rem",
 		Large: "2.4rem",
 		ExtraLarge: "3.2rem",

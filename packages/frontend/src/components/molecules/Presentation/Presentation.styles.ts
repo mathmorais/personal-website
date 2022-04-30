@@ -4,14 +4,21 @@ export const PresentationContainer = styled.div`
 	display: flex;
 	gap: 10px;
 
-	a {
-		color: ${({ theme: { colors } }) => colors.primary.blue};
-		font-weight: 700;
-		text-decoration: none;
+	.typed-cursor {
+		font-size: ${({ theme: { font } }) => font.sizes.ExtraLarge};
 	}
 `;
 
 export const PresentationText = styled.div`
 	display: flex;
 	flex-direction: column;
+	white-space: nowrap;
+
+	a {
+		color: ${({ theme: { colors } }) => colors.primary.yellow};
+	}
+
+	a:hover {
+		color: ${({ theme: { colors } }) => colors.primary.yellow}99;
+	}
 `;

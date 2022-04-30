@@ -34,7 +34,7 @@ export const Typing: React.FC<TypingProps> = ({ options, staticText }) => {
 			{!componentMounted ? (
 				<TypingText>{staticText}</TypingText>
 			) : (
-				<TypingText ref={typedElement} size="Large" weight={400} />
+				<TypingText ref={typedElement} size="ExtraLarge" weight={400} />
 			)}
 		</TypingWrapper>
 	);
