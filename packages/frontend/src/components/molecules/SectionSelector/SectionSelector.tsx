@@ -16,6 +16,7 @@ export const SectionSelector: React.FC<SectionSelectorProps> = ({
 		for (let index = 0; index < sectionCount; index++) {
 			serializedSections.push(
 				<ButtonRound
+					key={index}
 					selected={selectedSection === index}
 					onClick={() => setSelectedSection(index)}
 				/>

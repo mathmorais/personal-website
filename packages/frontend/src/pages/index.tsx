@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { Header } from "../components/organisms/Header/Header";
 import { HomePageSkeleton } from "../components/templates/HomePageSkeleton/HomePageSkeleton";
 
@@ -7,71 +7,41 @@ import LinkedinSvg from "../assets/Linkedin.svg";
 import { Presentation } from "components/molecules/Presentation/Presentation";
 import { Section } from "~/components/organisms/Section/Section";
 import { ProjectsGrid } from "~/components/organisms/ProjectsGrid/ProjectsGrid";
-import { ProjectCard } from "~/components/molecules/ProjectCard/ProjectCard";
 import { SectionWrapper } from "~/components/organisms/SectionWrapper/SectionWrapper";
 import { SectionSelector } from "~/components/molecules/SectionSelector/SectionSelector";
 
 import { TabSelector } from "~/components/organisms/TabSelector/TabSelector";
+import { ModalContextProvider } from "~/contexts/ModalContext";
+import { ProjectViewModal } from "~/components/molecules/Modal/variations/ProjectView/ProjectView";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ITab } from "~/interfaces/components/ITab";
-import { Typography } from "~/components/atoms/Typography/Typography";
+import { useMemo } from "react";
+import { ExperienciesList } from "~/components/organisms/ExperienciesList/ExperienciesList";
 
 const Home: NextPage = () => {
-	const presentationText =
-		"👋 Hi! I'm Matheus Morais, <br> <strong>Frontend Developer</strong> at <a href='https://cidadealta.gg'>Cidade Alta</a>";
+	const { t } = useTranslation(["common", "projects", "experiences", "skills"]);
 
 	const tabs: ITab[] = [
 		{
-			title: "About me",
+			title: t("experiences:title"),
 			content: (
-				<Typography size="Small">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
-					eligendi provident nesciunt labore nam totam fugiat rerum atque
-					aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor
-					fuga consequatur voluptas!
-				</Typography>
-			),
-		},
-		{
-			title: "Experiences",
-			content: (
-				<Typography size="Small">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
-				</Typography>
-			),
-		},
-		{
-			title: "Skills",
-			content: (
-				<Typography size="Small">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non qui
-					eligendi provident nesciunt labore nam totam fugiat rerum atque
-					aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor
-					fuga consequatur voluptas! Lorem, ipsum dolor sit amet consectetur
-					adipisicing elit. Non qui eligendi provident nesciunt labore nam totam
-					fugiat rerum atque aspernatur recusandae dolore veniam, perspiciatis
-					animi quos. Dolor fuga consequatur voluptas! Lorem, ipsum dolor sit
-					amet consectetur adipisicing elit. Non qui eligendi provident nesciunt
-					labore nam totam fugiat rerum atque aspernatur recusandae dolore
-					veniam, perspiciatis animi quos. Dolor fuga consequatur voluptas!
-				</Typography>
+				<ExperienciesList
+					experiencies={t("experiences:content", { returnObjects: true })}
+				/>
 			),
 		},
 	];
 
 	const sections = [
 		<Section fillScreen>
-			<Presentation presentationText={presentationText} />
+			<Presentation presentationText={t("presentation")} />
 		</Section>,
 		<Section fillScreen title="About me" withBackground>
 			<TabSelector tabs={tabs} />
 		</Section>,
-		<Section spacing={8} title="Projects" withBackground>
-			<ProjectsGrid>
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-			</ProjectsGrid>
+		<Section spacing={15} title={"projects.title"} withBackground>
+			<ProjectsGrid projects={[]} />
 		</Section>,
 	];
 
@@ -83,22 +53,36 @@ const Home: NextPage = () => {
 					navigations={[
 						{
 							label: GithubIcon,
-							navigateTo: "https://www.github.com/mathmorais",
+							href: "https://www.github.com/mathmorais",
 						},
 						{
 							label: LinkedinSvg,
-							navigateTo: "https://www.linkedin.com/in/mathmorais/",
+							href: "https://www.linkedin.com/in/mathmorais/",
 						},
 					]}
 				/>
 			}
 		>
-			<SectionWrapper>
-				<SectionSelector sectionCount={sections.length} />
+			<ModalContextProvider>
+				<ProjectViewModal />
+				<SectionWrapper>
+					<SectionSelector sectionCount={sections.length} />
+				</SectionWrapper>
 				{sections}
-			</SectionWrapper>
+			</ModalContextProvider>
 		</HomePageSkeleton>
 	);
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? "en", [
+			"common",
+			"projects",
+			"experiences",
+			"skills",
+		])),
+	},
+});
 
 export default Home;

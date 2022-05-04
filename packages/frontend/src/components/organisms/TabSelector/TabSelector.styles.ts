@@ -16,6 +16,7 @@ export const TabSelectedContent = styled(motion.div)`
 	overflow-y: auto;
 	margin-right: 5px;
 	overflow-x: hidden;
+	height: 20rem;
 
 	&::-webkit-scrollbar {
 		display: initial;

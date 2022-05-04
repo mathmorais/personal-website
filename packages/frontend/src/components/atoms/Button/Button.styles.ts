@@ -4,10 +4,12 @@ export type ButtonStyleProps = {
 	selected?: boolean;
 	fitContent?: boolean;
 	centralized?: boolean;
+	selectedColor?: string;
 };
 
-const ButtonSelected = css`
-	background: ${({ theme: { colors } }) => colors.primary.red};
+const ButtonSelected = css<Pick<ButtonStyleProps, "selectedColor">>`
+	background: ${({ theme: { colors }, selectedColor }) =>
+		selectedColor ?? colors.primary.red};
 `;
 
 const ButtonCentralized = css`
@@ -19,7 +21,8 @@ export const ButtonContainer = styled.button<ButtonStyleProps>`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 4px 15px;
+	padding: 4px 5px;
+	padding-right: 15px;
 	width: ${({ fitContent }) => (fitContent ? "fit-content" : "100%")};
 	border-radius: 2px;
 	border: none;

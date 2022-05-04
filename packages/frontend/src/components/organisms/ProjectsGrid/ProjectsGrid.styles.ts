@@ -5,10 +5,9 @@ export const ProjectsGridContainer = styled.section`
 	grid-template-columns: repeat(2, 1fr);
 	width: 100%;
 	height: fit-content;
-	overflow-y: scroll;
 	gap: 0 30px;
 
-	> button:nth-child(2n + 2) {
-		margin-top: 30px;
+	> div:nth-child(2n + 2) {
+		margin-top: 35px;
 	}
 `;

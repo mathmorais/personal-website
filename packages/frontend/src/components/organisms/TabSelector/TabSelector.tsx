@@ -16,15 +16,17 @@ export const TabSelector: React.FC<TabSelectorProps> = ({ tabs }) => {
 	const [currentTab, setCurrentTab] = useState<number>(0);
 
 	const currentTabContent = useMemo(() => {
-		return tabs && tabs[currentTab].content;
+		return tabs.length > 0 && tabs[currentTab].content;
 	}, [currentTab]);
 
 	const handleSerializeTabs = useCallback(
 		(tabsList: ITab[]) => {
 			if (tabsList?.length > 0) {
-				return tabsList.map(({ title }, index) => {
+				return tabsList.map(({ title, color }, index) => {
 					return (
 						<Button
+							key={index}
+							selectedColor={color}
 							selected={currentTab === index}
 							onClick={() => setCurrentTab(index)}
 						>
@@ -38,9 +40,9 @@ export const TabSelector: React.FC<TabSelectorProps> = ({ tabs }) => {
 	);
 
 	const ANIMATION_PROPS = {
-		initial: { opacity: 0, x: -50 },
+		initial: { opacity: 0, x: -100 },
 		animate: { opacity: 1, x: 0 },
-		exit: { opacity: 0, x: -50 },
+		exit: { opacity: 0, x: -100 },
 	};
 
 	return (

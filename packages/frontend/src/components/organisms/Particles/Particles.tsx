@@ -16,7 +16,6 @@ export const Particles: React.FC = ({ children }) => {
 			<TsParticles
 				id="tsparticles"
 				init={particleInit}
-				loaded={async (container) => console.log(container)}
 				options={particlesConfig}
 			>
 				{children}

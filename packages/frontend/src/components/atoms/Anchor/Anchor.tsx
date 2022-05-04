@@ -3,14 +3,12 @@ import { AnchorHTMLAttributes } from "react";
 import { AnchorContainer } from "./Anchor.styles";
 
 type Navigation = {
-	navigateTo?: string;
-	redirectTo?: string;
 	label?: string | React.FunctionComponent;
-} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">;
+} & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const Anchor: React.FC<Navigation> = ({ label, children, ...props }) => {
 	return (
-		<Link passHref href={props.navigateTo ?? ""}>
+		<Link passHref href={props.href ?? "#"}>
 			<AnchorContainer {...props}>{label ?? children}</AnchorContainer>
 		</Link>
 	);

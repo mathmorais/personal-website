@@ -1,0 +1,21 @@
+{
+	"title": "Projects",
+	"content": [
+		{
+			"title": "Cidade Alta Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"description": "lorem ipsum dolor sit amet consectetur adipisicing elit. Non qui eligendi provident nesciunt labore nam totam fugiat rerum atque aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor fuga consequatur voluptas!",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/challenge-cidade-alta"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript"
+			]
+		}
+	]
+}

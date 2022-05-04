@@ -17,6 +17,8 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 
 	scroll-snap-align: start;
 
+	padding-top: ${({ spacing }) => spacing && `${spacing}rem`};
+
 	padding-bottom: ${({ spacing }) => spacing && `${spacing}rem`};
 
 	background: ${({ withBackground, theme: { colors } }) =>

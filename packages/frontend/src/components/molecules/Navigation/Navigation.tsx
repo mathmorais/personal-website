@@ -11,7 +11,7 @@ export const Navigation: React.FC<NavigationProps> = ({ navigations }) => {
 		return navigations.map((navigation, index) => {
 			const Label = navigation.label as React.FunctionComponent;
 			return (
-				<Anchor key={index} navigateTo={navigation.navigateTo}>
+				<Anchor key={index} href={navigation.href}>
 					{typeof navigation.label === "string" ? navigation.label : <Label />}
 				</Anchor>
 			);

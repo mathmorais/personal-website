@@ -6,6 +6,7 @@ export const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+	
 
 	html {
 		scroll-snap-type: y mandatory;
@@ -22,10 +23,14 @@ export const Global = createGlobalStyle`
 
 
   body {
-		background: ${({ theme }) => theme.colors.neutrals.black};
 
+		background: ${({ theme }) => theme.colors.neutrals.black};
 		font: ${({ theme }) => theme.font.shortHand};
 		text-rendering: optimizeLegibility;
     font-smooth: antialiased;
+
+		
 	}
+
+
 `;

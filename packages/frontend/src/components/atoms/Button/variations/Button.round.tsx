@@ -6,9 +6,11 @@ const ButtonRoundSelected = css`
 `;
 
 export const ButtonRound = styled(Button)<{ selected?: boolean }>`
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	border-radius: 100%;
+	font-size: 0px;
+	padding: 0px;
 
 	background: ${({ theme: { colors } }) => colors.grays[300]};
 
