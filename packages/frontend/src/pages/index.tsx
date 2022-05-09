@@ -4,7 +4,6 @@ import { HomePageSkeleton } from "../components/templates/HomePageSkeleton/HomeP
 
 import GithubIcon from "../assets/svgs/Github.svg";
 import LinkedinSvg from "../assets/svgs/Linkedin.svg";
-import { SectionSelector } from "~/components/molecules/SectionSelector/SectionSelector";
 
 import { ModalContextProvider } from "~/contexts/ModalContext";
 import { ProjectViewModal } from "~/components/molecules/Modal/variations/ProjectView/ProjectView";
