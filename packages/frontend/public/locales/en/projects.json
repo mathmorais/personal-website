@@ -1,10 +1,10 @@
 {
-	"title": "Projects",
+	"title": "My projects",
 	"content": [
 		{
-			"title": "Cidade Alta Challenge",
+			"title": "This website",
 			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
-			"description": "lorem ipsum dolor sit amet consectetur adipisicing elit. Non qui eligendi provident nesciunt labore nam totam fugiat rerum atque aspernatur recusandae dolore veniam, perspiciatis animi quos. Dolor fuga consequatur voluptas!",
+			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
 			"redirects": [
 				{
 					"label": "Demo",
@@ -14,7 +14,25 @@
 			"tags": [
 				"React",
 				"Next.js",
-				"TypeScript"
+				"TypeScript",
+				"Redux"
+			]
+		},
+		{
+			"title": "Cidade Alta Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/challenge-cidade-alta"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Redux"
 			]
 		}
 	]

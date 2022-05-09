@@ -1,5 +1,9 @@
+import { Typography } from "~/components/atoms/Typography/Typography";
 import { IExperience } from "~/interfaces/components/IExperience";
-import { ExperienciesItemContainer } from "./ExperienciesItem.styles";
+import {
+	ExperienciesItemContainer,
+	ExperienciesItemDate,
+} from "./ExperienciesItem.styles";
 
 type ExperiencisItemProps = {
 	experience: IExperience;
@@ -10,8 +14,13 @@ export const ExperienciesItem: React.FC<ExperiencisItemProps> = ({
 }) => {
 	return (
 		<ExperienciesItemContainer>
-			<h1>{company}</h1>
-			<h2>{location}</h2>
+			<Typography>{company}</Typography>
+			<Typography>{location}</Typography>
+			<ExperienciesItemDate>
+				<Typography>{startDate}</Typography>
+				<Typography>-</Typography>
+				<Typography>{endDate}</Typography>
+			</ExperienciesItemDate>
 		</ExperienciesItemContainer>
 	);
 };

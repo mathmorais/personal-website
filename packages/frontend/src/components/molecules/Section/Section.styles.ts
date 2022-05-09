@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export type SectionStyleProps = {
-	withBackground?: boolean;
+	withoutBackground?: boolean;
 	fillScreen?: boolean;
 	spacing?: number;
 };
@@ -21,8 +21,8 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 
 	padding-bottom: ${({ spacing }) => spacing && `${spacing}rem`};
 
-	background: ${({ withBackground, theme: { colors } }) =>
-		withBackground && colors.neutrals.black};
+	background: ${({ withoutBackground, theme: { colors } }) =>
+		!withoutBackground && colors.neutrals.black};
 `;
 
 export const SectionContentAnimate = styled(motion.div)`

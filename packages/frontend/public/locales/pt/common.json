@@ -1,3 +1,9 @@
 {
-	"presentation": "👋 Olá! Eu me chamo Matheus Morais, <br> <strong>Desenvolvedor Frotend</strong> na <a href='https://cidadealta.gg'>Cidade Alta</a>"
+	"presentation": "👋 Olá! Sou Matheus Morais, <br> <strong>Desenvolvedor Front-end</strong> na <a href='https://cidadealta.gg'>Cidade Alta</a>",
+	"tabs": [
+		"about",
+		"skills",
+		"experiences",
+		"projects"
+	]
 }

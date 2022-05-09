@@ -10,9 +10,13 @@ import { ITab } from "~/interfaces/components/ITab";
 
 type TabSelectorProps = {
 	tabs: ITab[];
+	onTabChange?: (tab: ITab) => void;
 };
 
-export const TabSelector: React.FC<TabSelectorProps> = ({ tabs }) => {
+export const TabSelector: React.FC<TabSelectorProps> = ({
+	tabs,
+	onTabChange,
+}) => {
 	const [currentTab, setCurrentTab] = useState<number>(0);
 
 	const currentTabContent = useMemo(() => {
@@ -22,15 +26,18 @@ export const TabSelector: React.FC<TabSelectorProps> = ({ tabs }) => {
 	const handleSerializeTabs = useCallback(
 		(tabsList: ITab[]) => {
 			if (tabsList?.length > 0) {
-				return tabsList.map(({ title, color }, index) => {
+				return tabsList.map((tab, index) => {
 					return (
 						<Button
 							key={index}
-							selectedColor={color}
+							selectedColor={tab.color}
 							selected={currentTab === index}
-							onClick={() => setCurrentTab(index)}
+							onClick={() => {
+								setCurrentTab(index);
+								onTabChange && onTabChange(tab);
+							}}
 						>
-							{title}
+							{tab.title}
 						</Button>
 					);
 				});
@@ -49,7 +56,7 @@ export const TabSelector: React.FC<TabSelectorProps> = ({ tabs }) => {
 		<TabSelectorWrapper>
 			<TabSelectorContainer>{handleSerializeTabs(tabs)}</TabSelectorContainer>
 			<AnimatePresence>
-				<TabSelectedContent layout>
+				<TabSelectedContent>
 					{currentTab !== null && (
 						<motion.div key={currentTab} {...ANIMATION_PROPS}>
 							{currentTabContent}

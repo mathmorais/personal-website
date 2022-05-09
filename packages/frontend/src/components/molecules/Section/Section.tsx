@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { HTMLAttributes, useEffect } from "react";
 import {
 	useAnimation,
 	motion,
@@ -18,7 +18,8 @@ import {
 
 type SectionProps = {
 	title?: string;
-} & SectionStyleProps;
+} & SectionStyleProps &
+	HTMLAttributes<HTMLDivElement>;
 
 export const Section: React.FC<SectionProps> = ({
 	children,
@@ -47,7 +48,7 @@ export const Section: React.FC<SectionProps> = ({
 	}, []);
 
 	return (
-		<InView threshold={0.5}>
+		<InView threshold={0.25}>
 			{({ ref, inView }) => {
 				inView ? controls.start("animate") : controls.start("exit");
 
