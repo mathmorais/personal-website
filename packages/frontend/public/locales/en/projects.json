@@ -4,18 +4,21 @@
 		{
 			"title": "This website",
 			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
-			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
+			"description": "This is my personal website. It is a simple website that I created to show my projects and to show my skills.",
 			"redirects": [
 				{
 					"label": "Demo",
-					"url": "https://github.com/mathmorais/challenge-cidade-alta"
+					"url": "https://github.com/mathmorais/personal-website"
+				},
+				{
+					"label": "Deploy",
+					"url": "https://mathmorais.dev"
 				}
 			],
 			"tags": [
 				"React",
 				"Next.js",
-				"TypeScript",
-				"Redux"
+				"TypeScript"
 			]
 		},
 		{
@@ -33,6 +36,22 @@
 				"Next.js",
 				"TypeScript",
 				"Redux"
+			]
+		},
+		{
+			"title": "Byte",
+			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
+			"description": "A simple blog with the focus on technology articles, inside the site is possible to see articles about differents topics.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/byte"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript"
 			]
 		}
 	]

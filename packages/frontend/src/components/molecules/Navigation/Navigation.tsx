@@ -16,7 +16,7 @@ export const Navigation: React.FC<NavigationProps> = ({ navigations }) => {
 				</Anchor>
 			);
 		});
-	}, [Navigation]);
+	}, [navigations]);
 
 	return <NavigationContainer>{serializeNavigations()}</NavigationContainer>;
 };

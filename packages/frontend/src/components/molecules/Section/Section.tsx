@@ -1,10 +1,5 @@
 import { HTMLAttributes, useEffect } from "react";
-import {
-	useAnimation,
-	motion,
-	AnimationProps,
-	animations,
-} from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import { Typography } from "~/components/atoms/Typography/Typography";
 import { VerticalLine } from "~/components/atoms/VerticalLine/VerticalLine";
@@ -45,7 +40,7 @@ export const Section: React.FC<SectionProps> = ({
 
 	useEffect(() => {
 		controls.set("initial");
-	}, []);
+	}, [controls]);
 
 	return (
 		<InView threshold={0.25}>

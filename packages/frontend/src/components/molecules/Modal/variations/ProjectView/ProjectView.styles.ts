@@ -8,5 +8,11 @@ export const ModalTags = styled.div`
 export const ModalPhoto = styled.div`
 	height: 100%;
 	position: relative;
+
 	border-radius: 4px;
+`;
+
+export const ModalRedirects = styled.div`
+	display: flex;
+	gap: 15px;
 `;

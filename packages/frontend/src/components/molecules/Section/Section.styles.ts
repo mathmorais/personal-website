@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import styled from "styled-components";
 
 export type SectionStyleProps = {
@@ -25,7 +25,7 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 		!withoutBackground && colors.neutrals.black};
 `;
 
-export const SectionContentAnimate = styled(motion.div)`
+export const SectionContentAnimate = styled(m.div)`
 	width: 100%;
 	display: flex;
 	justify-content: center;

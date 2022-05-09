@@ -2,9 +2,29 @@
 	"title": "Meus projetos",
 	"content": [
 		{
+			"title": "Este website",
+			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"description": "Este é meu site pessoal.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/personal-website"
+				},
+				{
+					"label": "Deploy",
+					"url": "https://mathmorais.dev"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript"
+			]
+		},
+		{
 			"title": "Cidade Alta Challenge",
 			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
-			"description": "",
+			"description": "Um projeto criado com React, Next.js e TypeScript, com a função de gerenciar os códigos penais da cidade.",
 			"redirects": [
 				{
 					"label": "Demo",
@@ -16,6 +36,22 @@
 				"Next.js",
 				"TypeScript",
 				"Redux"
+			]
+		},
+		{
+			"title": "Byte",
+			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
+			"description": "Um simples blog de tecnologia.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/byte"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript"
 			]
 		}
 	]

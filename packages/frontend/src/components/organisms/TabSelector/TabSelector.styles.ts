@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import styled from "styled-components";
 
 export const TabSelectorWrapper = styled.div`
@@ -12,7 +12,7 @@ export const TabSelectorContainer = styled.div`
 	gap: 15px;
 `;
 
-export const TabSelectedContent = styled(motion.div)`
+export const TabSelectedContent = styled(m.div)`
 	overflow-y: auto;
 	margin-right: 5px;
 	overflow-x: hidden;

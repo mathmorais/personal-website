@@ -10,11 +10,12 @@ type SectionListProps = {
 
 export const SectionList: React.FC<SectionListProps> = ({ sections }) => {
 	const serializedSections = useMemo(() => {
-		return sections.map((section) => (
+		return sections.map((section, index) => (
 			<Section
 				id={`#${section.name ?? section.title}`}
 				fillScreen
 				title={section.title}
+				key={index}
 				{...section.options}
 			>
 				{section.content}

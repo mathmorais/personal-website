@@ -1,5 +1,5 @@
 import { useMemo, useState, useCallback } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { Button } from "~/components/atoms/Button/Button";
 import {
 	TabSelectedContent,
@@ -21,7 +21,7 @@ export const TabSelector: React.FC<TabSelectorProps> = ({
 
 	const currentTabContent = useMemo(() => {
 		return tabs.length > 0 && tabs[currentTab].content;
-	}, [currentTab]);
+	}, [currentTab, tabs]);
 
 	const handleSerializeTabs = useCallback(
 		(tabsList: ITab[]) => {
@@ -43,7 +43,7 @@ export const TabSelector: React.FC<TabSelectorProps> = ({
 				});
 			}
 		},
-		[currentTab]
+		[currentTab, onTabChange]
 	);
 
 	const ANIMATION_PROPS = {
@@ -58,9 +58,9 @@ export const TabSelector: React.FC<TabSelectorProps> = ({
 			<AnimatePresence>
 				<TabSelectedContent>
 					{currentTab !== null && (
-						<motion.div key={currentTab} {...ANIMATION_PROPS}>
+						<m.div key={currentTab} {...ANIMATION_PROPS}>
 							{currentTabContent}
-						</motion.div>
+						</m.div>
 					)}
 				</TabSelectedContent>
 			</AnimatePresence>

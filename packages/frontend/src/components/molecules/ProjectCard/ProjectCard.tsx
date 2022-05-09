@@ -35,6 +35,7 @@ export const ProjectCard: React.FC<{ project: IProject }> = ({
 					objectFit="cover"
 					objectPosition="center"
 					src={photoUrl}
+					alt={title}
 				/>
 			</ProjectCardPhoto>
 

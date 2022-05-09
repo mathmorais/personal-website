@@ -27,6 +27,7 @@ export const Typing: React.FC<TypingProps> = ({ options, staticText }) => {
 		return () => {
 			typed?.destroy();
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [componentMounted]);
 
 	return (
