@@ -12,6 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useHomeSections } from "~/hooks/useHomeSections";
 import { SectionWrapper } from "~/components/molecules/SectionWrapper/SectionWrapper";
 import { SectionList } from "~/components/organisms/SectionList/SectionList";
+import Head from "next/head";
 
 const Home: NextPage = () => {
 	const { sections } = useHomeSections();
@@ -34,10 +35,13 @@ const Home: NextPage = () => {
 				/>
 			}
 		>
+			<Head>
+				<title>Matheus Morais</title>
+			</Head>
 			<ModalContextProvider>
 				<ProjectViewModal />
 				<SectionWrapper>
-					<SectionSelector sections={sections} />
+					{/* <SectionSelector sections={sections} /> */}
 				</SectionWrapper>
 				<SectionList sections={sections} />
 			</ModalContextProvider>
