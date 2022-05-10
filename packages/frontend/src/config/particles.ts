@@ -3,10 +3,9 @@ import type { IParticlesProps } from "react-tsparticles";
 export const particlesConfig: IParticlesProps["options"] = {
 	particles: {
 		number: {
-			value: 100,
+			value: 200,
 			density: {
 				enable: true,
-				value_area: 400,
 			},
 		},
 		color: {

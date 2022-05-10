@@ -39,6 +39,9 @@ export const useHomeSections = () => {
 					projects={t("projects:content", { returnObjects: true })}
 				/>
 			),
+			options: {
+				fillScreen: false,
+			},
 		},
 	];
 

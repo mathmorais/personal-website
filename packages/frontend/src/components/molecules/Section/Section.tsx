@@ -43,7 +43,7 @@ export const Section: React.FC<SectionProps> = ({
 	}, [controls]);
 
 	return (
-		<InView threshold={0.25}>
+		<InView threshold={0.2}>
 			{({ ref, inView }) => {
 				inView ? controls.start("animate") : controls.start("exit");
 

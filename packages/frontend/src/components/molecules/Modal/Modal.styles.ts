@@ -10,7 +10,7 @@ export const ModalContainer = styled(m.div)`
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	z-index: 3;
+	z-index: 11;
 `;
 
 export const ModalBackground = styled.div`
@@ -29,7 +29,11 @@ export const ModalMain = styled(m.section)`
 	height: 50rem;
 	background: ${({ theme: { colors } }) => colors.grays[400]};
 	border-radius: 4px;
-	padding: 5px;
+	padding: 0.5rem;
+
+	@media screen and (max-width: 800px) {
+		margin: 0 2rem;
+	}
 `;
 
 export const ModalContent = styled.div`

@@ -9,7 +9,7 @@ export const Global = createGlobalStyle`
 	
 
 	html {
-		scroll-snap-type: y mandatory;
+		scroll-snap-type: y proximity;
 	}
 
 	&:root {
@@ -23,14 +23,20 @@ export const Global = createGlobalStyle`
 
 
   body {
-
 		background: ${({ theme }) => theme.colors.neutrals.black};
 		font: ${({ theme }) => theme.font.shortHand};
 		text-rendering: optimizeLegibility;
     font-smooth: antialiased;
-
-		
 	}
 
+	:root {
+		@media screen and (max-width: 800px) {
+			font-size: 57%;
+		}
+
+		@media screen and (max-width: 500px) {
+			font-size: 55%;
+		}
+	}
 
 `;
