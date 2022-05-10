@@ -15,8 +15,6 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 	justify-content: center;
 	align-items: center;
 
-	scroll-snap-align: center;
-
 	padding-top: ${({ spacing }) => spacing && `${spacing}rem`};
 
 	padding-bottom: ${({ spacing }) => (spacing ? `${spacing}rem` : "2.5rem")};

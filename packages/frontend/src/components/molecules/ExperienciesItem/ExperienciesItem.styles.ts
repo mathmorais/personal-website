@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ExperienciesItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
 `;
 
 export const ExperienciesItemDate = styled.div`
@@ -12,5 +13,10 @@ export const ExperienciesItemDate = styled.div`
 	gap: 5px;
 
 	font-weight: 400;
+
 	color: ${({ theme }) => theme.colors.grays[100]};
+
+	p {
+		font-size: ${({ theme: { font } }) => font.sizes.Small};
+	}
 `;

@@ -25,6 +25,8 @@ export const HeaderContainer = styled.header<HeaderStylesProps>`
 	transition: background 0.25s, color 0.25s;
 	transition-timing-function: ease-in-out;
 
+	position: fixed;
+	top: 0px;
 	${({ scrolled }) => scrolled && HeaderScrolled};
 
 	@media screen and (max-width: 800px) {

@@ -16,7 +16,8 @@ export const TabSelectedContent = styled(m.div)`
 	overflow-y: auto;
 	margin-right: 5px;
 	overflow-x: hidden;
-	height: 10rem;
+	width: 100%;
+	height: fit-content;
 
 	&::-webkit-scrollbar {
 		display: initial;
