@@ -10,4 +10,16 @@ export const ProjectsGridContainer = styled.section`
 	> div:nth-child(2n + 2) {
 		margin-top: 35px;
 	}
+
+	@media screen and (max-width: 800px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+
+		> div:nth-child(2n + 2) {
+			margin-top: initial;
+		}
+	}
 `;

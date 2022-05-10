@@ -1,7 +1,3 @@
-<div align="left">
-<img width=70 src=".github/assets/logo.png">
-</div>
-
 ### 💻 Demo
 
 <img src=".github/assets/home.png" alt="Inicio" />
@@ -32,8 +28,9 @@ Após declarar as variaveis ambientes em um arquivo .env, inicialize o projeto e
 
 ### 🧑‍🔬 Principais techs
 
-- Reactjs
-- Nextjs
+- ReactJS
+- NextJS
 - TypeScript
 - Styled-Components
 - Axios
+- Keystone

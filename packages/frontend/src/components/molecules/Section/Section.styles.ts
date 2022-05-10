@@ -15,14 +15,18 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 	justify-content: center;
 	align-items: center;
 
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 
 	padding-top: ${({ spacing }) => spacing && `${spacing}rem`};
 
-	padding-bottom: ${({ spacing }) => spacing && `${spacing}rem`};
+	padding-bottom: ${({ spacing }) => (spacing ? `${spacing}rem` : "2.5rem")};
 
 	background: ${({ withoutBackground, theme: { colors } }) =>
 		!withoutBackground && colors.neutrals.black};
+
+	@media screen and (max-width: 800px) {
+		padding: 2.5rem 5rem;
+	}
 `;
 
 export const SectionContentAnimate = styled(m.div)`

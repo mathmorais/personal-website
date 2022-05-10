@@ -4,8 +4,8 @@ export const ProjectCardContainer = styled.div`
 	display: flex;
 	align-items: flex-end;
 
-	width: 320px;
-	height: 385px;
+	width: 32rem;
+	height: 38.5rem;
 
 	background: ${({ theme }) => theme.colors.grays[300]};
 	position: relative;
@@ -32,6 +32,10 @@ export const ProjectCardContainer = styled.div`
 			rgba(10, 10, 10, 0.85) 65.6%,
 			rgba(10, 10, 10, 0.95) 90.94%
 		);
+	}
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
 	}
 `;
 
