@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export type TextStyleProps = {
 	weight?: number;
+	maxHeight?: number;
 };
 
 const Text = styled.p<TextStyleProps>`
 	font-family: ${({ theme }) => theme.font.families.primary};
 	font-weight: ${({ weight }) => weight ?? 500};
+	max-height: ${({ maxHeight }) => maxHeight ?? "none"}px;
+	text-overflow: clip;
 `;
 
 export const ExtraLarge = styled(Text).attrs({ as: "h1" })`

@@ -1,51 +1,57 @@
-import type { NextPage } from "next";
-import { useState } from "react";
+import type { GetStaticProps, NextPage } from "next";
 import { Header } from "../components/organisms/Header/Header";
 import { HomePageSkeleton } from "../components/templates/HomePageSkeleton/HomePageSkeleton";
-import { EffectCallback, useScrollPosition } from "../hooks/useScrollPosition";
 
-import GithubIcon from "../assets/Github.svg";
-import LinkedinSvg from "../assets/Linkedin.svg";
-import { Presentation } from "components/molecules/Presentation/Presentation";
+import GithubIcon from "../assets/svgs/Github.svg";
+import LinkedinSvg from "../assets/svgs/Linkedin.svg";
+
+import { ModalContextProvider } from "~/contexts/ModalContext";
+import { ProjectViewModal } from "~/components/molecules/Modal/variations/ProjectView/ProjectView";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useHomeSections } from "~/hooks/useHomeSections";
+import { SectionWrapper } from "~/components/molecules/SectionWrapper/SectionWrapper";
+import { SectionList } from "~/components/organisms/SectionList/SectionList";
+import Head from "next/head";
 
 const Home: NextPage = () => {
-	const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-	const { scrollPositionHandler } = useScrollPosition();
-
-	const presentationText =
-		"👋 Hi! I'm Matheus Morais, <br> <strong>Frontend Web Developer</strong> at <a href='https://cidadealta.gg'>Cidade Alta</a>";
-
-	const onScroll: EffectCallback = ({ currPos }) =>
-		setHasScrolled(currPos.y > 0);
-
-	scrollPositionHandler({
-		effect: onScroll,
-		useWindow: true,
-		deps: [],
-	});
+	const { sections } = useHomeSections();
 
 	return (
 		<HomePageSkeleton
 			header={
 				<Header
-					scrolled={hasScrolled}
 					logo="mathmorais.dev"
 					navigations={[
 						{
 							label: GithubIcon,
-							navigateTo: "https://www.github.com/mathmorais",
+							href: "https://www.github.com/mathmorais",
 						},
 						{
 							label: LinkedinSvg,
-							navigateTo: "https://www.linkedin.com/in/mathmorais/",
+							href: "https://www.linkedin.com/in/mathmorais/",
 						},
 					]}
 				/>
 			}
 		>
-			<Presentation presentationText={presentationText} />
+			<Head>
+				<title>Matheus Morais</title>
+			</Head>
+			<ModalContextProvider>
+				<ProjectViewModal />
+				<SectionWrapper>
+					{/* <SectionSelector sections={sections} /> */}
+				</SectionWrapper>
+				<SectionList sections={sections} />
+			</ModalContextProvider>
 		</HomePageSkeleton>
 	);
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? "en")),
+	},
+});
 
 export default Home;

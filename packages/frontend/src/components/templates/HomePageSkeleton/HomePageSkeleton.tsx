@@ -1,3 +1,4 @@
+import { Particles } from "~/components/organisms/Particles/Particles";
 import {
 	HomePageSkeletonContent,
 	HomePageSkeletonMain,
@@ -12,6 +13,7 @@ export const HomePageSkeleton: React.FC<{
 
 	return (
 		<HomePageSkeletonWrapper>
+			<Particles />
 			<HomePageSkeletonContent>
 				<HomePageSkeletonMain>
 					{Header}

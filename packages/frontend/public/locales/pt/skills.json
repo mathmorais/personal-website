@@ -1,0 +1,17 @@
+{
+	"title": "Habilidades",
+	"content": [
+		{
+			"name": "JavaScript"
+		},
+		{
+			"name": "TypeScript"
+		},
+		{
+			"name": "ReactJS"
+		},
+		{
+			"name": "NextJS"
+		}
+	]
+}

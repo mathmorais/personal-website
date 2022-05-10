@@ -8,15 +8,15 @@ export class Colors implements IColors {
 
 	readonly grays = {
 		100: "#B8B8B8",
-		200: "#292929",
-		300: "#333333",
+		200: "#333333",
+		300: "#292929",
 		400: "#1F1F1F",
 	};
 
 	readonly primary = {
 		red: "#A44C4C",
-		blue: "#4C7DA4",
-		green: "#4CA44C",
-		yellow: "#A4A44C",
+		blue: "#3A7BD5",
+		yellow: "#FFCE00",
+		green: "#00B16A",
 	};
 }

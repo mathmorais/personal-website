@@ -1,0 +1,78 @@
+{
+	"title": "My projects",
+	"content": [
+		{
+			"title": "This website",
+			"photoUrl": "https://github.com/mathmorais/personal-website/raw/development/.github/assets/home.png",
+			"description": "This is my personal website. It is a simple website that I created to show my projects and to show my skills.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/personal-website"
+				},
+				{
+					"label": "Deploy",
+					"url": "https://mathmorais.dev"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Storybook",
+				"KeystoneJS"
+			]
+		},
+		{
+			"title": "Cidade Alta Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/challenge-cidade-alta"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Redux"
+			]
+		},
+		{
+			"title": "Pedido Pago Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-pedido-pago/raw/master/.github/assets/home.png",
+			"description": "A dashboard developed with Next.js to manage colaborators and their permissions. I also introduced tests with Jest and React Testing Library.",
+			"redirects": [
+				{
+					"label": "Github",
+					"url": "https://github.com/mathmorais/challenge-pedido-pago"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Emotion",
+				"Jest"
+			]
+		},
+		{
+			"title": "Byte",
+			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
+			"description": "A simple blog with the focus on technology articles, inside the site is possible to see articles about differents topics.",
+			"redirects": [
+				{
+					"label": "Demo",
+					"url": "https://github.com/mathmorais/byte"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript"
+			]
+		}
+	]
+}

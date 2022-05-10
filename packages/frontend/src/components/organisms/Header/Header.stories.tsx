@@ -16,7 +16,7 @@ Default.args = {
 	navigations: [
 		{
 			label: "Home",
-			redirectTo: "#",
+			href: "#",
 		},
 	],
 };
