@@ -15,12 +15,20 @@ export const ExperienciesItem: React.FC<ExperiencisItemProps> = ({
 	return (
 		<ExperienciesItemContainer>
 			<Typography>{company}</Typography>
-			<Typography>{location}</Typography>
+			<Typography>
+				{title} - {location}
+			</Typography>
 			<ExperienciesItemDate>
 				<Typography>{startDate}</Typography>
 				<Typography>-</Typography>
 				<Typography>{endDate}</Typography>
 			</ExperienciesItemDate>
+			<Typography size="Small" weight={500}>
+				{description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Aperiam nisi alias pariatur omnis? Exercitationem, qui magni
+				repudiandae, blanditiis totam harum nihil laudantium adipisci modi,
+				reprehenderit cum. Omnis illo quidem quis.
+			</Typography>
 		</ExperienciesItemContainer>
 	);
 };
