@@ -2,8 +2,16 @@
 	"title": "Habilidades",
 	"content": [
 		{
-			"name": "JavaScript",
-			"icon": "JavaScript.svg"
+			"name": "JavaScript"
+		},
+		{
+			"name": "TypeScript"
+		},
+		{
+			"name": "ReactJS"
+		},
+		{
+			"name": "NextJS"
 		}
 	]
 }

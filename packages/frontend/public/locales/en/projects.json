@@ -3,7 +3,7 @@
 	"content": [
 		{
 			"title": "This website",
-			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"photoUrl": "https://github.com/mathmorais/personal-website/raw/development/.github/assets/home.png",
 			"description": "This is my personal website. It is a simple website that I created to show my projects and to show my skills.",
 			"redirects": [
 				{
@@ -18,7 +18,9 @@
 			"tags": [
 				"React",
 				"Next.js",
-				"TypeScript"
+				"TypeScript",
+				"Storybook",
+				"KeystoneJS"
 			]
 		},
 		{
@@ -36,6 +38,24 @@
 				"Next.js",
 				"TypeScript",
 				"Redux"
+			]
+		},
+		{
+			"title": "Pedido Pago Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-pedido-pago/raw/master/.github/assets/home.png",
+			"description": "A dashboard developed with Next.js to manage colaborators and their permissions. I also introduced tests with Jest and React Testing Library.",
+			"redirects": [
+				{
+					"label": "Github",
+					"url": "https://github.com/mathmorais/challenge-pedido-pago"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Emotion",
+				"Jest"
 			]
 		},
 		{
