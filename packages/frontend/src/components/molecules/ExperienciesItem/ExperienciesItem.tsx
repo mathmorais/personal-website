@@ -1,3 +1,4 @@
+import { TextArea } from "~/components/atoms/TextArea/TextArea";
 import { Typography } from "~/components/atoms/Typography/Typography";
 import { IExperience } from "~/interfaces/components/IExperience";
 import {
@@ -23,12 +24,7 @@ export const ExperienciesItem: React.FC<ExperiencisItemProps> = ({
 				<Typography>-</Typography>
 				<Typography>{endDate}</Typography>
 			</ExperienciesItemDate>
-			<Typography size="Small" weight={500}>
-				{description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Aperiam nisi alias pariatur omnis? Exercitationem, qui magni
-				repudiandae, blanditiis totam harum nihil laudantium adipisci modi,
-				reprehenderit cum. Omnis illo quidem quis.
-			</Typography>
+			<TextArea readOnly>{description}</TextArea>
 		</ExperienciesItemContainer>
 	);
 };

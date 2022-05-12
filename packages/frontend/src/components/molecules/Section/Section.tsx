@@ -13,11 +13,13 @@ import {
 
 type SectionProps = {
 	title?: string;
+	description?: string;
 } & SectionStyleProps &
 	HTMLAttributes<HTMLDivElement>;
 
 export const Section: React.FC<SectionProps> = ({
 	children,
+	description,
 	title,
 	...props
 }) => {
@@ -57,7 +59,7 @@ export const Section: React.FC<SectionProps> = ({
 										<Typography size="Large">{title}</Typography>
 									</SectionTitle>
 								)}
-
+								<Typography>{description}</Typography>
 								{children}
 							</SectionContent>
 						</SectionContentAnimate>

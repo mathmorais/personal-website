@@ -1,7 +1,11 @@
-import { forwardRef, ForwardRefRenderFunction } from "react";
+import {
+	forwardRef,
+	ForwardRefRenderFunction,
+	TextareaHTMLAttributes,
+} from "react";
 import { TextAreaContainer } from "./TextArea.styles";
 
-type TextAreaProps = {} & React.HTMLAttributes<HTMLTextAreaElement>;
+type TextAreaProps = {} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const TextAreaFunction: ForwardRefRenderFunction<
 	HTMLTextAreaElement,

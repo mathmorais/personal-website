@@ -7,7 +7,7 @@
 			"description": "This is my personal website. It is a simple website that I created to show my projects and to show my skills.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/personal-website"
 				},
 				{
@@ -29,7 +29,7 @@
 			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/challenge-cidade-alta"
 				}
 			],
@@ -64,7 +64,7 @@
 			"description": "A simple blog with the focus on technology articles, inside the site is possible to see articles about differents topics.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/byte"
 				}
 			],

@@ -27,6 +27,7 @@ export const useHomeSections = () => {
 		{
 			title: t("skills:title"),
 			name: "skills",
+			description: t("skills:description"),
 			content: (
 				<SkillsList skills={t("skills:content", { returnObjects: true })} />
 			),

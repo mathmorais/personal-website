@@ -7,7 +7,7 @@
 			"description": "Este é meu site pessoal.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/personal-website"
 				},
 				{
@@ -27,7 +27,7 @@
 			"description": "Um projeto criado com React, Next.js e TypeScript, com a função de gerenciar os códigos penais da cidade.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/challenge-cidade-alta"
 				}
 			],
@@ -44,7 +44,7 @@
 			"description": "Um simples blog de tecnologia.",
 			"redirects": [
 				{
-					"label": "Demo",
+					"label": "Github",
 					"url": "https://github.com/mathmorais/byte"
 				}
 			],
