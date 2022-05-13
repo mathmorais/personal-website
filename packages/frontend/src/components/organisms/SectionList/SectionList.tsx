@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Typography } from "~/components/atoms/Typography/Typography";
 import { Section } from "~/components/molecules/Section/Section";
 import { SectionContextProvider } from "~/contexts/SectionContext";
 import { ISection } from "~/interfaces/components/ISection";
@@ -15,6 +16,7 @@ export const SectionList: React.FC<SectionListProps> = ({ sections }) => {
 				id={`#${section.name ?? section.title}`}
 				fillScreen
 				title={section.title}
+				description={section.description}
 				key={index}
 				{...section.options}
 			>

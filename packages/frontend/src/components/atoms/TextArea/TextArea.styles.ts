@@ -10,4 +10,5 @@ export const TextAreaContainer = styled.textarea`
 	resize: none;
 	padding: 10px;
 	font-size: ${({ theme }) => theme.font.sizes.Small};
+	outline: none;
 `;

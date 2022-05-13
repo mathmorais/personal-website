@@ -1,5 +1,6 @@
 {
 	"title": "Skills",
+	"description": "Technologies that I use during development",
 	"content": [
 		{
 			"name": "JavaScript"

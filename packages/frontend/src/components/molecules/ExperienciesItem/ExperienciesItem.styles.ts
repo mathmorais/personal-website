@@ -4,6 +4,10 @@ export const ExperienciesItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+
+	textarea {
+		height: 22.5rem;
+	}
 `;
 
 export const ExperienciesItemDate = styled.div`

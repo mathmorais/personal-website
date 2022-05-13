@@ -38,12 +38,14 @@ export const SectionContent = styled.div`
 	width: 100%;
 	max-width: 640px;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
 `;
 
 export const SectionTitle = styled.div`
 	display: flex;
 	gap: 10px;
-	margin-bottom: 25px;
 
 	h2 {
 		font-weight: 600;
