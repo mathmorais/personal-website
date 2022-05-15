@@ -19,8 +19,8 @@ export const SkillCardIcon = styled.div`
 
 	svg {
 		border-radius: inherit;
-		width: 70px;
-		height: 70px;
+		width: 50px;
+		height: 50px;
 		fill: ${({ theme }) => theme.colors.grays[100]};
 	}
 `;

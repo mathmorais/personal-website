@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import { Typography } from "~/components/atoms/Typography/Typography";
 import { SkillCard } from "~/components/molecules/SkillCard/SkillCard";
 import { ISkill } from "~/interfaces/components/ISkill";
 import { SkillsListContainer } from "./SkillsList.styles";

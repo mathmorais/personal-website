@@ -9,7 +9,7 @@ export type SectionStyleProps = {
 
 export const SectionContainer = styled.section<SectionStyleProps>`
 	width: 100%;
-	min-height: ${({ fillScreen }) => (fillScreen ? "90vh" : "fit-content")};
+	min-height: ${({ fillScreen }) => (fillScreen ? "100vh" : "fit-content")};
 
 	display: flex;
 	justify-content: center;
@@ -23,7 +23,7 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 		!withoutBackground && colors.neutrals.black};
 
 	@media screen and (max-width: 800px) {
-		padding: 2.5rem 5rem;
+		padding: 2.5rem 3rem;
 	}
 `;
 
@@ -36,11 +36,11 @@ export const SectionContentAnimate = styled(m.div)`
 
 export const SectionContent = styled.div`
 	width: 100%;
-	max-width: 640px;
+	max-width: 700px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	gap: 25px;
+	gap: 2.5rem;
 `;
 
 export const SectionTitle = styled.div`
@@ -50,4 +50,8 @@ export const SectionTitle = styled.div`
 	h2 {
 		font-weight: 600;
 	}
+`;
+
+export const SectionDescription = styled.div`
+	margin-bottom: 1.5rem;
 `;
