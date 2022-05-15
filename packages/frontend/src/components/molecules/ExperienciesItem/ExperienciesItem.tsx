@@ -24,7 +24,7 @@ export const ExperienciesItem: React.FC<ExperiencisItemProps> = ({
 				<Typography>-</Typography>
 				<Typography>{endDate}</Typography>
 			</ExperienciesItemDate>
-			<TextArea readOnly>{description}</TextArea>
+			<Typography size="Small">{description}</Typography>
 		</ExperienciesItemContainer>
 	);
 };

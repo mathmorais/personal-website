@@ -31,6 +31,9 @@ export const useHomeSections = () => {
 			content: (
 				<SkillsList skills={t("skills:content", { returnObjects: true })} />
 			),
+			options: {
+				fillScreen: true,
+			},
 		},
 		{
 			title: t("projects:title"),
@@ -40,9 +43,6 @@ export const useHomeSections = () => {
 					projects={t("projects:content", { returnObjects: true })}
 				/>
 			),
-			options: {
-				fillScreen: false,
-			},
 		},
 	];
 

@@ -3,7 +3,7 @@ import { useContext, useCallback } from "react";
 import { Anchor } from "~/components/atoms/Anchor/Anchor";
 import { Button } from "~/components/atoms/Button/Button";
 import { Typography } from "~/components/atoms/Typography/Typography";
-import { TagList } from "~/components/molecules/TagList/TagList";
+import { TagList } from "~/components/organisms/TagList/TagList";
 import { ModalContext } from "~/contexts/ModalContext";
 import { IProject } from "~/interfaces/components/IProject";
 import { Modal } from "../../Modal";
@@ -44,8 +44,6 @@ export const ProjectViewModal: React.FC<ProjectViewModalProps> = () => {
 					objectFit="cover"
 					alt={`${title} Preview`}
 					src={photoUrl}
-					placeholder="blur"
-					blurDataURL="data:iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOUPwMAARAA7QxBaNsAAAAASUVORK5CYII="
 				/>
 			</ModalPhoto>
 

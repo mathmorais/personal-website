@@ -10,6 +10,7 @@ const Text = styled.p<TextStyleProps>`
 	font-weight: ${({ weight }) => weight ?? 500};
 	max-height: ${({ maxHeight }) => maxHeight ?? "none"}px;
 	text-overflow: clip;
+	white-space: pre-wrap;
 `;
 
 export const ExtraLarge = styled(Text).attrs({ as: "h1" })`

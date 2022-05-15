@@ -3,14 +3,11 @@ import {
 	ProjectCardContainer,
 	ProjectCardContent,
 	ProjectCardPhoto,
-	ProjectCardRow,
 } from "./ProjectCard.styles";
-import Link from "next/link";
 import { Typography } from "~/components/atoms/Typography/Typography";
-import { Button } from "~/components/atoms/Button/Button";
 import { useContext } from "react";
 import { ModalContext } from "~/contexts/ModalContext";
-import { TagList } from "../TagList/TagList";
+import { TagList } from "../../organisms/TagList/TagList";
 import { IProject } from "~/interfaces/components/IProject";
 
 export const ProjectCard: React.FC<{ project: IProject }> = ({
