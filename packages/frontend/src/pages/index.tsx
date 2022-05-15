@@ -12,6 +12,9 @@ import { useHomeSections } from "~/hooks/useHomeSections";
 import { SectionWrapper } from "~/components/molecules/SectionWrapper/SectionWrapper";
 import { SectionList } from "~/components/organisms/SectionList/SectionList";
 import Head from "next/head";
+import { Typography } from "~/components/atoms/Typography/Typography";
+import { Footer } from "~/components/organisms/Footer/Footer";
+import { Anchor } from "~/components/atoms/Anchor/Anchor";
 
 const Home: NextPage = () => {
 	const { sections } = useHomeSections();
@@ -44,6 +47,12 @@ const Home: NextPage = () => {
 				</SectionWrapper>
 				<SectionList sections={sections} />
 			</ModalContextProvider>
+			<Footer>
+				<Typography size="Small">
+					Made with 💜 by{" "}
+					<Anchor href="https://github.com/mathmorais">Me</Anchor>
+				</Typography>
+			</Footer>
 		</HomePageSkeleton>
 	);
 };

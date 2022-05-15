@@ -47,7 +47,7 @@ export const Section: React.FC<SectionProps> = ({
 	return (
 		<InView threshold={0.2}>
 			{({ ref, inView }) => {
-				inView ? controls.start("animate") : controls.start("exit");
+				inView && controls.start("animate");
 
 				return (
 					<SectionContainer {...props}>
@@ -59,7 +59,7 @@ export const Section: React.FC<SectionProps> = ({
 										<Typography size="Large">{title}</Typography>
 									</SectionTitle>
 								)}
-								<Typography>{description}</Typography>
+								<Typography weight={400}>{description}</Typography>
 								{children}
 							</SectionContent>
 						</SectionContentAnimate>

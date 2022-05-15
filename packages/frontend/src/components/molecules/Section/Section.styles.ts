@@ -9,7 +9,7 @@ export type SectionStyleProps = {
 
 export const SectionContainer = styled.section<SectionStyleProps>`
 	width: 100%;
-	height: ${({ fillScreen }) => (fillScreen ? "100vh" : "fit-content")};
+	min-height: ${({ fillScreen }) => (fillScreen ? "90vh" : "fit-content")};
 
 	display: flex;
 	justify-content: center;
@@ -17,7 +17,7 @@ export const SectionContainer = styled.section<SectionStyleProps>`
 
 	padding-top: ${({ spacing }) => spacing && `${spacing}rem`};
 
-	padding-bottom: ${({ spacing }) => (spacing ? `${spacing}rem` : "2.5rem")};
+	padding-bottom: ${({ spacing }) => spacing && `${spacing}rem`};
 
 	background: ${({ withoutBackground, theme: { colors } }) =>
 		!withoutBackground && colors.neutrals.black};
