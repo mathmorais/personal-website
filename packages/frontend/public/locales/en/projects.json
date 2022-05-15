@@ -4,10 +4,10 @@
 		{
 			"title": "This website",
 			"photoUrl": "https://github.com/mathmorais/personal-website/raw/development/.github/assets/home.png",
-			"description": "This is my personal website. It is a simple website that I created to show my projects and to show my skills.",
+			"description": "My personal website that I created to show more information about me and my projects.",
 			"redirects": [
 				{
-					"label": "Github",
+					"label": "Source",
 					"url": "https://github.com/mathmorais/personal-website"
 				},
 				{
@@ -19,17 +19,16 @@
 				"React",
 				"Next.js",
 				"TypeScript",
-				"Storybook",
 				"KeystoneJS"
 			]
 		},
 		{
 			"title": "Cidade Alta Challenge",
 			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
-			"description": "A project developed with Next.js and React.js. It's a web application that allows you to create and manage penal codes for the city of Cidade Alta.",
+			"description": "A project developed with Next.js and React. It's a dashboard that allows you to create and manage penal codes for the city of Cidade Alta.",
 			"redirects": [
 				{
-					"label": "Github",
+					"label": "Source",
 					"url": "https://github.com/mathmorais/challenge-cidade-alta"
 				}
 			],
@@ -43,10 +42,10 @@
 		{
 			"title": "Pedido Pago Challenge",
 			"photoUrl": "https://github.com/mathmorais/challenge-pedido-pago/raw/master/.github/assets/home.png",
-			"description": "A dashboard developed with Next.js to manage colaborators and their permissions. I also introduced tests with Jest and React Testing Library.",
+			"description": "A dashboard developed with Next.js to manage collaborator's information. \nI also introduced tests inside the project using Jest and React Testing Library.",
 			"redirects": [
 				{
-					"label": "Github",
+					"label": "Source",
 					"url": "https://github.com/mathmorais/challenge-pedido-pago"
 				}
 			],
@@ -61,10 +60,10 @@
 		{
 			"title": "Byte",
 			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
-			"description": "A simple blog with the focus on technology articles, inside the site is possible to see articles about differents topics.",
+			"description": "A simple blog with the focus on technology articles. \nIt was created using Next.js and React.",
 			"redirects": [
 				{
-					"label": "Github",
+					"label": "Source",
 					"url": "https://github.com/mathmorais/byte"
 				}
 			],
