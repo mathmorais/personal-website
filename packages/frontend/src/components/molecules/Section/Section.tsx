@@ -9,6 +9,7 @@ import {
 	SectionContent,
 	SectionTitle,
 	SectionContentAnimate,
+	SectionDescription,
 } from "./Section.styles";
 
 type SectionProps = {
@@ -59,7 +60,13 @@ export const Section: React.FC<SectionProps> = ({
 										<Typography size="Large">{title}</Typography>
 									</SectionTitle>
 								)}
-								<Typography weight={400}>{description}</Typography>
+								{description && (
+									<SectionDescription>
+										<Typography weight={400} size="Small">
+											{description}
+										</Typography>
+									</SectionDescription>
+								)}
 								{children}
 							</SectionContent>
 						</SectionContentAnimate>

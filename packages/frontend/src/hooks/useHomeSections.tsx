@@ -22,18 +22,8 @@ export const useHomeSections = () => {
 		{
 			title: t("about:title"),
 			name: "about",
+			description: t("about:description"),
 			content: <TabSelector tabs={tabs} />,
-		},
-		{
-			title: t("skills:title"),
-			name: "skills",
-			description: t("skills:description"),
-			content: (
-				<SkillsList skills={t("skills:content", { returnObjects: true })} />
-			),
-			options: {
-				fillScreen: true,
-			},
 		},
 		{
 			title: t("projects:title"),
