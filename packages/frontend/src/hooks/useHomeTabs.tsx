@@ -4,7 +4,7 @@ import { SkillsList } from "~/components/organisms/SkillsList/SkillsList";
 import { ITab } from "~/interfaces/components/ITab";
 
 export const useHomeTabs = () => {
-	const { t } = useTranslation(["about", "skills", "experiences"]);
+	const { t } = useTranslation(["about", "skills", "tools", "experiences"]);
 
 	const tabs: ITab[] = [
 		{
@@ -19,6 +19,12 @@ export const useHomeTabs = () => {
 			title: t("skills:title"),
 			content: (
 				<SkillsList skills={t("skills:content", { returnObjects: true })} />
+			),
+		},
+		{
+			title: t("tools:title"),
+			content: (
+				<SkillsList skills={t("tools:content", { returnObjects: true })} />
 			),
 		},
 	];
