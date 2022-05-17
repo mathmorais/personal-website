@@ -2,9 +2,6 @@ import type { GetStaticProps, NextPage } from "next";
 import { Header } from "../components/organisms/Header/Header";
 import { HomePageSkeleton } from "../components/templates/HomePageSkeleton/HomePageSkeleton";
 
-import GithubIcon from "../assets/svgs/Github.svg";
-import LinkedinSvg from "../assets/svgs/Linkedin.svg";
-
 import { ModalContextProvider } from "~/contexts/ModalContext";
 import { ProjectViewModal } from "~/components/molecules/Modal/variations/ProjectView/ProjectView";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -15,9 +12,11 @@ import Head from "next/head";
 import { Typography } from "~/components/atoms/Typography/Typography";
 import { Footer } from "~/components/organisms/Footer/Footer";
 import { Anchor } from "~/components/atoms/Anchor/Anchor";
+import { Icons } from "~/constants/icons";
 
 const Home: NextPage = () => {
 	const { sections } = useHomeSections();
+	const icons = new Icons();
 
 	return (
 		<HomePageSkeleton
@@ -26,11 +25,11 @@ const Home: NextPage = () => {
 					logo="mathmorais.dev"
 					navigations={[
 						{
-							label: GithubIcon,
+							label: icons.getIcon("Github"),
 							href: "https://www.github.com/mathmorais",
 						},
 						{
-							label: LinkedinSvg,
+							label: icons.getIcon("Linkedin"),
 							href: "https://www.linkedin.com/in/mathmorais/",
 						},
 					]}

@@ -1,8 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { Presentation } from "~/components/molecules/Presentation/Presentation";
 import { ProjectsGrid } from "~/components/organisms/ProjectsGrid/ProjectsGrid";
-import { Section } from "~/components/molecules/Section/Section";
-import { SkillsList } from "~/components/organisms/SkillsList/SkillsList";
 import { TabSelector } from "~/components/organisms/TabSelector/TabSelector";
 import { useHomeTabs } from "./useHomeTabs";
 import { ISection } from "~/interfaces/components/ISection";

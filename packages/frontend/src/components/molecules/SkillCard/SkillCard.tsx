@@ -4,13 +4,11 @@ import { Typography } from "~/components/atoms/Typography/Typography";
 import { Icons } from "~/constants/icons";
 
 export const SkillCard: React.FC<{ skill: ISkill }> = ({ skill }) => {
-	const Icon = new Icons().getIcon(skill.name);
+	const Icon = new Icons().getIcon(skill.name) ?? undefined;
 
 	return (
 		<SkillCardContainer>
-			<SkillCardIcon>
-				<Icon />
-			</SkillCardIcon>
+			<SkillCardIcon>{Icon && <Icon />}</SkillCardIcon>
 			<Typography weight={400}>{skill.name}</Typography>
 		</SkillCardContainer>
 	);
