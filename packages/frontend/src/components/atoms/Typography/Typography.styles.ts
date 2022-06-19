@@ -23,10 +23,12 @@ export const Large = styled(Text).attrs({ as: "p" })`
 
 export const Medium = styled(Text).attrs({ as: "p" })`
 	font-size: ${({ theme }) => theme.font.sizes.Medium};
+	line-height: 28px;
 `;
 
 export const Small = styled(Text).attrs({ as: "p" })`
 	font-size: ${({ theme }) => theme.font.sizes.Small};
+	line-height: 21px;
 `;
 
 export const ExtraSmall = styled(Text).attrs({ as: "p" })`

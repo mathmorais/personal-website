@@ -4,7 +4,7 @@
 		{
 			"title": "Este website",
 			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
-			"description": "Este é meu site pessoal.",
+			"description": "Meu site pessoal que eu criei para mostrar alguns do meus projetos e mais informações sobre mim.",
 			"redirects": [
 				{
 					"label": "Github",
@@ -39,9 +39,27 @@
 			]
 		},
 		{
+			"title": "Pedido Pago Challenge",
+			"photoUrl": "https://github.com/mathmorais/challenge-pedido-pago/raw/master/.github/assets/home.png",
+			"description": "Um dashboard desenvolvido para gerenciar os colaboradores da empresa. \nUtilizando Next.js, fui capaz de implementa SSR e aprimorar a perfomance e a usabilidade da aplicação. \nTambém implementei alguns testes unitários utilizando Jest e React Testing Library.",
+			"redirects": [
+				{
+					"label": "Source",
+					"url": "https://github.com/mathmorais/challenge-pedido-pago"
+				}
+			],
+			"tags": [
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Emotion",
+				"Jest"
+			]
+		},
+		{
 			"title": "Byte",
 			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
-			"description": "Um simples blog de tecnologia.",
+			"description": "Um simples blog com o foco em artigos de tecnologia. Utilzando React, Next.js e TypeScript no Front-end e Node.js no Back-end, eu fui capaz de criar uma aplicação funcional.",
 			"redirects": [
 				{
 					"label": "Github",
@@ -51,7 +69,9 @@
 			"tags": [
 				"React",
 				"Next.js",
-				"TypeScript"
+				"TypeScript",
+				"Node.js",
+				"MongoDB"
 			]
 		}
 	]

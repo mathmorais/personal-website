@@ -1,5 +1,6 @@
 {
-	"title": "Habilidades",
+	"title": "Tecnologias",
+	"description": "Principais tecnologias que eu utilizo",
 	"content": [
 		{
 			"name": "JavaScript"

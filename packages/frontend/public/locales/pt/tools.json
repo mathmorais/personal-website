@@ -1,0 +1,18 @@
+{
+	"title": "Ferramentas",
+	"description": "Principais ferramentas que eu utilizo durante o desenvolvimento",
+	"content": [
+		{
+			"name": "Figma"
+		},
+		{
+			"name": "Vscode"
+		},
+		{
+			"name": "Notion"
+		},
+		{
+			"name": "AzureDevOps"
+		}
+	]
+}

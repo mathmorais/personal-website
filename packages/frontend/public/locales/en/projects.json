@@ -60,7 +60,7 @@
 		{
 			"title": "Byte",
 			"photoUrl": "https://github.com/mathmorais/byte/raw/main/assets/Login.png",
-			"description": "A simple blog with the focus on technology articles. \nIt was created using Next.js and React.",
+			"description": "A simple blog with the focus on technology articles. \nUsing React, Next.js and TypeScript on Front-end and Node.js on Back-end, I was capable to create a functional application.",
 			"redirects": [
 				{
 					"label": "Source",
