@@ -17,7 +17,6 @@ export const PresentationContainer = styled.div`
 export const PresentationText = styled.div<{ shouldShow: boolean }>`
 	display: flex;
 	flex-direction: column;
-	white-space: nowrap;
 	visibility: ${({ shouldShow }) => (shouldShow ? "visible" : "hidden")};
 
 	a {
