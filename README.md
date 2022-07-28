@@ -2,7 +2,7 @@
 
 <img src=".github/assets/home.png" alt="Inicio" />
 
-[Deploy](https://challenge-cidade-alta.vercel.app)
+[Deploy](https://mathmorais.dev)
 
 ### ⚡ Como iniciar
 
