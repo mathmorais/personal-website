@@ -1,6 +1,6 @@
 ### 💻 Demo
 
-<img src=".github/assets/home.png" alt="Inicio" />
+<img src=".github/assets/homepage.png" alt="Inicio" />
 
 [Deploy](https://mathmorais.dev)
 
