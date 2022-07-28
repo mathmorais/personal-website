@@ -2,6 +2,14 @@
 	"title": "Experiencias",
 	"content": [
 		{
+			"title": "Web Developer",
+			"company": "BNP Soluções em TI",
+			"location": "São Bernardo do Campo, São Paulo",
+			"description": "-",
+			"startDate": "Jul 2022",
+			"endDate": "Atual"
+		},
+		{
 			"title": "Desenvolvedor Frontend",
 			"company": "Cidade Alta",
 			"location": "Remoto",
