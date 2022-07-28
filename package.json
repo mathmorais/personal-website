@@ -1,5 +1,6 @@
 {
 	"name": "personal-website",
+	"version": "1.0.1",
 	"repository": "git@github.com:mathmorais/personal-website.git",
 	"author": "mathmorais <gm80648@gmail.com>",
 	"private": true,
