@@ -3,7 +3,7 @@
 	"content": [
 		{
 			"title": "Este website",
-			"photoUrl": "https://github.com/mathmorais/challenge-cidade-alta/raw/main/.github/assets/dashboard.png",
+			"photoUrl": "https://raw.githubusercontent.com/mathmorais/personal-website/main/.github/assets/home.png",
 			"description": "Meu site pessoal que eu criei para mostrar alguns do meus projetos e mais informações sobre mim.",
 			"redirects": [
 				{
@@ -15,11 +15,7 @@
 					"url": "https://mathmorais.dev"
 				}
 			],
-			"tags": [
-				"React",
-				"Next.js",
-				"TypeScript"
-			]
+			"tags": ["React", "Next.js", "TypeScript"]
 		},
 		{
 			"title": "Cidade Alta Challenge",
@@ -31,12 +27,7 @@
 					"url": "https://github.com/mathmorais/challenge-cidade-alta"
 				}
 			],
-			"tags": [
-				"React",
-				"Next.js",
-				"TypeScript",
-				"Redux"
-			]
+			"tags": ["React", "Next.js", "TypeScript", "Redux"]
 		},
 		{
 			"title": "Pedido Pago Challenge",
@@ -48,13 +39,7 @@
 					"url": "https://github.com/mathmorais/challenge-pedido-pago"
 				}
 			],
-			"tags": [
-				"React",
-				"Next.js",
-				"TypeScript",
-				"Emotion",
-				"Jest"
-			]
+			"tags": ["React", "Next.js", "TypeScript", "Emotion", "Jest"]
 		},
 		{
 			"title": "Byte",
@@ -66,13 +51,7 @@
 					"url": "https://github.com/mathmorais/byte"
 				}
 			],
-			"tags": [
-				"React",
-				"Next.js",
-				"TypeScript",
-				"Node.js",
-				"MongoDB"
-			]
+			"tags": ["React", "Next.js", "TypeScript", "Node.js", "MongoDB"]
 		}
 	]
 }

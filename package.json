@@ -1,5 +1,6 @@
 {
 	"name": "personal-website",
+	"version": "1.0.1",
 	"repository": "git@github.com:mathmorais/personal-website.git",
 	"author": "mathmorais <gm80648@gmail.com>",
 	"private": true,
@@ -10,10 +11,7 @@
 		"dev": "yarn workspace @personal-website/frontend dev",
 		"build": "yarn workspace @personal-website/frontend next build",
 		"start": "yarn workspace @personal-website/frontend next start",
-		"storybook": "yarn workspace @personal-website/frontend storybook",
-		"cms:dev": "yarn workspace @personal-website/cms dev",
-		"cms:build": "yarn workspace @personal-website/cms keystone build",
-		"cms:start": "yarn workspace @personal-website/cmskeystone start"
+		"storybook": "yarn workspace @personal-website/frontend storybook"
 	},
 	"devDependencies": {
 		"@types/node": "17.0.20",
